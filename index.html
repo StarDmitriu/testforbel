@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="be">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тэст: Правапіс У і Ў</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        .quiz-container {
+            max-width: 700px;
+            margin: 30px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #7f8c8d;
+            margin-bottom: 30px;
+            font-size: 0.95em;
+        }
+        .question {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .question-title {
+            font-weight: 600;
+            font-size: 1.1em;
+            margin-bottom: 12px;
+            color: #2c3e50;
+        }
+        .options {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .options li {
+            margin-bottom: 10px;
+        }
+        label {
+            cursor: pointer;
+            display: block;
+            padding: 8px 12px;
+            background: #f8f9fa;
+            border-radius: 4px;
+            border: 1px solid #e9ecef;
+            transition: background 0.2s;
+        }
+        label:hover {
+            background: #e9ecef;
+        }
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 10px;
+            transform: scale(1.1);
+            vertical-align: middle;
+        }
+        input[type="text"] {
+            width: 60px;
+            padding: 6px;
+            font-size: 1.1em;
+            text-align: center;
+            border: 2px solid #3498db;
+            border-radius: 4px;
+            font-weight: bold;
+            color: #2c3e50;
+            text-transform: lowercase;
+        }
+        button {
+            display: block;
+            width: 100%;
+            background-color: #2ecc71;
+            color: white;
+            border: none;
+            padding: 15px;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s;
+            box-shadow: 0 4px 6px rgba(46, 204, 113, 0.2);
+        }
+        button:hover {
+            background-color: #27ae60;
+        }
+        #result {
+            margin-top: 25px;
+            padding: 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 6px;
+            display: none;
+        }
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .info-box {
+            background-color: #e8f4fd;
+            border-left: 4px solid #3498db;
+            padding: 10px 15px;
+            margin-bottom: 20px;
+            font-size: 0.9em;
+            border-radius: 0 4px 4px 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="quiz-container">
+    <h1>Тэст: Правапіс "У" і "Ў"</h1>
+    <div class="subtitle">Праверце свае веды па беларускай арфаграфіі</div>
+    
+    <div class="info-box">
+        <strong>Інструкцыя:</strong><br>
+        • Заданне 1 мае <strong>адзін</strong> правільны варыянт адказу.<br>
+        • Заданні 2–6 маюць <strong>некалькі</strong> правільных варыянтаў.<br>
+        • У заданнях 7–10 неабходна <strong>ўпісаць</strong> літару <strong>у</strong> або <strong>ў</strong> у тэкставае поле.
+    </div>
+
+    <form id="quizForm">
+
+        <div class="question">
+            <div class="question-title">1. Выберыце ОДЫН правільны варыянт. У якім слове на месцы пропуску пішацца літара Ў (у нескладовае)?</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q1" value="A"> шлагба...м</label></li>
+                <li><label><input type="radio" name="q1" value="B"> во...к</label></li>
+                <li><label><input type="radio" name="q1" value="C"> рады...с</label></li>
+                <li><label><input type="radio" name="q1" value="D"> со...с</label></li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <div class="question-title">2. Выберыце ЎСЕ словы, дзе на месцы пропуску трэба пісаць літару Ў:</div>
+            <ul class="options">
+                <li><label><input type="checkbox" name="q2" value="A"> па...за</label></li>
+                <li><label><input type="checkbox" name="q2" value="B"> прыгожы ...чынак</label></li>
+                <li><label><input type="checkbox" name="q2" value="C"> чыта... з захапленнем</label></li>
+                <li><label><input type="checkbox" name="q2" value="D"> на...ка</label></li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <div class="question-title">3. Выберыце ЎСЕ выпадкі, дзе пасля злучка (дэфіса) пішацца літара Ў:</div>
+            <ul class="options">
+                <li><label><input type="checkbox" name="q3" value="A"> паўночна-...сходні</label></li>
+                <li><label><input type="checkbox" name="q3" value="B"> па-...,краінску</label></li>
+                <li><label><input type="checkbox" name="q3" value="C"> жанчына-...рач</label></li>
+                <li><label><input type="checkbox" name="q3" value="D"> віцэ-...спышкі</label></li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <div class="question-title">4. Выберыце ЎСЕ словы іншамоўнага паходжання, у якіх пішацца літара Ў:</div>
+            <ul class="options">
+                <li><label><input type="checkbox" name="q4" value="A"> а...дыторыя</label></li>
+                <li><label><input type="checkbox" name="q4" value="B"> шлагба...м</label></li>
+                <li><label><input type="checkbox" name="q4" value="C"> sa...na</label></li>
+                <li><label><input type="checkbox" name="q4" value="D"> а...тамат</label></li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <div class="question-title">5. Выберыце ЎСЕ варыянты, дзе пасля знакаў прыпынку ці пры паўзе пішацца літара У (складовае):</div>
+            <ul class="options">
+                <li><label><input type="checkbox" name="q5" value="A"> Прыйшоў брат, ... хаце стала ціха.</label></li>
+                <li><label><input type="checkbox" name="q5" value="B"> Надышла зіма. ... лесе шмат снегу.</label></li>
+                <li><label><input type="checkbox" name="q5" value="C"> Брат паехаў, а ... хаце стала ціха.</label></li>
+                <li><label><input type="checkbox" name="q5" value="D"> Свабода, ...пэўненасць, сіла.</label></li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <div class="question-title">6. Выберыце ЎСЕ выпадкі, дзе літара Ў пішацца ў пачатку слова пасля галоснай:</div>
+            <ul class="options">
+                <li><label><input type="checkbox" name="q6" value="A"> яна ...вайшла</label></li>
+                <li><label><input type="checkbox" name="q6" value="B"> быў ... Мінску</label></li>
+                <li><label><input type="checkbox" name="q6" value="C"> сонца ...зышло</label></li>
+                <li><label><input type="checkbox" name="q6" value="D"> вельмі ...тульна</label></li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <div class="question-title">7. Упішыце літару "у" ці "ў" на месцы пропуску:</div>
+            <p>Над галаво<input type="text" id="q7" maxlength="1"> спявалі птушкі.</p>
+        </div>
+
+        <div class="question">
+            <div class="question-title">8. Упішыце літару "у" ці "ў" на месцы пропуску:</div>
+            <p>Універсітэт <input type="text" id="q8" maxlength="1"> Мінску.</p>
+        </div>
+
+        <div class="question">
+            <div class="question-title">9. Упішыце літару "у" ці "ў" на месцы пропуску:</div>
+            <p>У заапарку мы ўбачылі прыгожага стра<input type="text" id="q9" maxlength="1">са.</p>
+        </div>
+
+        <div class="question">
+            <div class="question-title">10. Упішыце літару "у" ці "ў" на месцы пропуску:</div>
+            <p>Брат сабраў рэчы і паехаў <input type="text" id="q10" maxlength="1"> вёску.</p>
+        </div>
+
+        <button type="button" onclick="checkAnswers()">Праверыць вынікі</button>
+    </form>
+
+    <div id="result"></div>
+</div>
+
+<script>
+function checkAnswers() {
+    let score = 0;
+    const totalQuestions = 10;
+
+    // Пытанне 1 (Адзін варыянт: B)
+    const q1 = document.querySelector('input[name="q1"]:checked');
+    if (q1 && q1.value === "B") {
+        score++;
+    }
+
+    // Пытанне 2 (Некалькі варыянтаў: B, C, D)
+    const q2A = document.querySelector('input[name="q2"][value="A"]').checked;
+    const q2B = document.querySelector('input[name="q2"][value="B"]').checked;
+    const q2C = document.querySelector('input[name="q2"][value="C"]').checked;
+    const q2D = document.querySelector('input[name="q2"][value="D"]').checked;
+    if (!q2A && q2B && q2C && q2D) {
+        score++;
+    }
+
+    // Пытанне 3 (Некалькі варыянтаў: B, C)
+    const q3A = document.querySelector('input[name="q3"][value="A"]').checked;
+    const q3B = document.querySelector('input[name="q3"][value="B"]').checked;
+    const q3C = document.querySelector('input[name="q3"][value="C"]').checked;
+    const q3D = document.querySelector('input[name="q3"][value="D"]').checked;
+    if (!q3A && q3B && q3C && !q3D) {
+        score++;
+    }
+
+    // Пытанне 4 (Некалькі варыянтаў: C, D)
+    const q4A = document.querySelector('input[name="q4"][value="A"]').checked;
+    const q4B = document.querySelector('input[name="q4"][value="B"]').checked;
+    const q4C = document.querySelector('input[name="q4"][value="C"]').checked;
+    const q4D = document.querySelector('input[name="q4"][value="D"]').checked;
+    if (!q4A && !q4B && q4C && q4D) {
+        score++;
+    }
+
+    // Пытанне 5 (Некалькі варыянтаў: A, B, C, D)
+    const q5A = document.querySelector('input[name="q5"][value="A"]').checked;
+    const q5B = document.querySelector('input[name="q5"][value="B"]').checked;
+    const q5C = document.querySelector('input[name="q5"][value="C"]').checked;
+    const q5D = document.querySelector('input[name="q5"][value="D"]').checked;
+    if (q5A && q5B && q5C && q5D) {
+        score++;
+    }
+
+    // Пытанне 6 (Некалькі варыянтаў: A, D)
+    const q6A = document.querySelector('input[name="q6"][value="A"]').checked;
+    const q6B = document.querySelector('input[name="q6"][value="B"]').checked;
+    const q6C = document.querySelector('input[name="q6"][value="C"]').checked;
+    const q6D = document.querySelector('input[name="q6"][value="D"]').checked;
+    if (q6A && !q6B && !q6C && q6D) {
+        score++;
+    }
+
+    // Пытанне 7 (Адказ: ў)
+    const q7 = document.getElementById('q7').value.trim().toLowerCase();
+    if (q7 === 'ў') {
+        score++;
+    }
+
+    // Пытанне 8 (Адказ: у)
+    const q8 = document.getElementById('q8').value.trim().toLowerCase();
+    if (q8 === 'у') {
+        score++;
+    }
+
+    // Пытанне 9 (Адказ: у)
+    const q9 = document.getElementById('q9').value.trim().toLowerCase();
+    if (q9 === 'у') {
+        score++;
+    }
+
+    // Пытанне 10 (Адказ: у)
+    const q10 = document.getElementById('q10').value.trim().toLowerCase();
+    if (q10 === 'у') {
+        score++;
+    }
+
+    // Вывод вынікаў
+    const resultDiv = document.getElementById('result');
+    resultDiv.style.display = 'block';
+    resultDiv.className = 'success';
+    resultDiv.innerHTML = `Ваш вынік: ${score} з ${totalQuestions} правільных адказаў!`;
+}
+</script>
+
+</body>
+      </html>
