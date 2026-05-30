@@ -231,7 +231,7 @@ function checkAnswers() {
     const q2B = document.querySelector('input[name="q2"][value="B"]').checked;
     const q2C = document.querySelector('input[name="q2"][value="C"]').checked;
     const q2D = document.querySelector('input[name="q2"][value="D"]').checked;
-    if (!q2A && q2B && q2C && q2D) {
+    if (!q2A && q2B && q2C && !q2D) {
         score++;
     }
 
@@ -249,7 +249,7 @@ function checkAnswers() {
     const q4B = document.querySelector('input[name="q4"][value="B"]').checked;
     const q4C = document.querySelector('input[name="q4"][value="C"]').checked;
     const q4D = document.querySelector('input[name="q4"][value="D"]').checked;
-    if (!q4A && !q4B && q4C && q4D) {
+    if (!q4A && q4B && q4C && !q4D) {
         score++;
     }
 
