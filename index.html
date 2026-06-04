@@ -152,7 +152,7 @@
         <div class="question">
             <div class="question-title">3. Выберыце выпадкі, дзе пасля злучка пішацца літара Ў:</div>
             <ul class="options">
-                <li><label><input type="checkbox" name="q3" value="A"> урач-...трагубца</label></li>
+                <li><label><input type="checkbox" name="q3" value="A"> жанчына-...рач</label></li>
                 <li><label><input type="checkbox" name="q3" value="B"> па-...чарашняму</label></li>
                 <li><label><input type="checkbox" name="q3" value="C"> віцэ-...дзельнік</label></li>
                 <li><label><input type="checkbox" name="q3" value="D"> блок-...лік</label></li>
@@ -163,7 +163,7 @@
             <div class="question-title">4. Выберыце ўсе словы іншамоўнага паходжання, у якіх пішацца літара Ў:</div>
             <ul class="options">
                 <li><label><input type="checkbox" name="q4" value="A"> шо...</label></li>
-                <li><label><input type="checkbox" name="q4" value="B"> шлагба...м</label></li>
+                <li><label><input type="checkbox" name="q4" value="B"> па...за</label></li>
                 <li><label><input type="checkbox" name="q4" value="C"> сa...на</label></li>
                 <li><label><input type="checkbox" name="q4" value="D"> тон...с</label></li>
             </ul>
@@ -173,7 +173,7 @@
             <div class="question-title">5. Выберыце ўсе варыянты, дзе пасля знакаў прыпынку пішацца літара ў:</div>
             <ul class="options">
                 <li><label><input type="checkbox" name="q5" value="A"> Прыйшоў брат, ... хаце стала ціха.</label></li>
-                <li><label><input type="checkbox" name="q5" value="B"> Надышла зіма, ... лесе шмат снегу.</label></li>
+                <li><label><input type="checkbox" name="q5" value="B"> Надышла зіма, і ... лесе шмат снегу.</label></li>
                 <li><label><input type="checkbox" name="q5" value="C"> Брат паехаў, а ... хаце стала ціха.</label></li>
                 <li><label><input type="checkbox" name="q5" value="D"> Свабода, ...пэўненасць, сіла.</label></li>
             </ul>
@@ -192,21 +192,33 @@
         <div class="question">
             <div class="question-title">7. Упішыце літару "у" ці "ў" на месцы пропуску:</div>
             <p>Мы прыйшлі <input type="text" id="q7" maxlength="1"> густы лес.</p>
-        </div>
-
-        <div class="question">
-            <div class="question-title">8. Упішыце літару "у" ці "ў" на месцы пропуску:</div>
             <p>Універсітэт <input type="text" id="q8" maxlength="1"> Мінску.</p>
-        </div>
-
-        <div class="question">
-            <div class="question-title">9. Упішыце літару "у" ці "ў" на месцы пропуску:</div>
             <p>Воўк жыве <input type="text" id="q9" maxlength="1"> густым лесе.</p>
+            <p>Брат сабраў рэчы і паехаў <input type="text" id="q71" maxlength="1"> вёску.</p>
         </div>
 
         <div class="question">
-            <div class="question-title">10. Упішыце літару "у" ці "ў" на месцы пропуску:</div>
-            <p>Брат сабраў рэчы і паехаў <input type="text" id="q10" maxlength="1"> вёску.</p>
+            <div class="question-title">8. Перакладзіце рускае слова ў беларускае</div>
+            <p> авторитетный <input type="text" id="q11"></p>
+        </div>
+
+        <div class="question">
+            <div class="question-title">9. Устанавіце адпаведнасць паміж словамі і даведкамі пра іх паходжанне</div>
+
+            <p>1 фауна <input type="text" id="q91" maxlength="1"> а. ад лац. radius — спіца, прамень</p>
+            <p>2 раунд <input type="text" id="q92" maxlength="1"> б. ад J. Joule — прозвішча англійскага фізіка</p>
+            <p>3 джоўль <input type="text" id="q93" maxlength="1"> в. ад англ. round — кола, круг</p>
+            <p>4 радыус <input type="text" id="q94" maxlength="1"> г. ад лац. fauna — імя старажытнарымскай багіні    палёў і лясоў</p>
+        </div>
+
+        <div class="question">
+          <div class="question-title">10. Выберыце ў якіх выпадках пішацца Ў?</div>
+            <ul class="options">
+                <li><label><input type="checkbox" name="q10" value="A"> на канцы іншамоўных слоў не пад націскам</label></li>
+                <li><label><input type="checkbox" name="q10" value="B"> пасля знакаў прыпынку</label></li>
+                <li><label><input type="checkbox" name="q10" value="C"> у іншамоўных словах, якія заканчваюцца на ­ум, ­ус</label></li>
+                <li><label><input type="checkbox" name="q10" value="D"> пад націскам</label></li>
+            </ul>
         </div>
 
         <button type="button" onclick="checkAnswers()">Праверыць вынікі</button>
@@ -240,7 +252,7 @@ function checkAnswers() {
     const q3B = document.querySelector('input[name="q3"][value="B"]').checked;
     const q3C = document.querySelector('input[name="q3"][value="C"]').checked;
     const q3D = document.querySelector('input[name="q3"][value="D"]').checked;
-    if (!q3A && q3B && q3C && !q3D) {
+    if (q3A && q3B && q3C && !q3D) {
         score++;
     }
 
@@ -258,7 +270,7 @@ function checkAnswers() {
     const q5B = document.querySelector('input[name="q5"][value="B"]').checked;
     const q5C = document.querySelector('input[name="q5"][value="C"]').checked;
     const q5D = document.querySelector('input[name="q5"][value="D"]').checked;
-    if (!q5A && q5B && q5C && q5D) {
+    if (!q5A && q5B && q5C && !q5D) {
         score++;
     }
 
@@ -273,27 +285,37 @@ function checkAnswers() {
 
     // Пытанне 7 (Адказ: ў)
     const q7 = document.getElementById('q7').value.trim().toLowerCase();
-    if (q7 === 'ў') {
-        score++;
-    }
-
-    // Пытанне 8 (Адказ: у)
     const q8 = document.getElementById('q8').value.trim().toLowerCase();
-    if (q8 === 'у') {
-        score++;
-    }
-
-    // Пытанне 9 (Адказ: у)
     const q9 = document.getElementById('q9').value.trim().toLowerCase();
-    if (q9 === 'ў') {
+    const q71 = document.getElementById('q71').value.trim().toLowerCase();
+    if (q7 === 'ў' && q8 === 'у' && q9 === 'ў' && q71 === 'у') {
         score++;
     }
 
-    // Пытанне 10 (Адказ: у)
-    const q10 = document.getElementById('q10').value.trim().toLowerCase();
-    if (q10 === 'у') {
+    // Пытанне 8 
+    const q11 = document.getElementById('q11').value.trim().toLowerCase();
+    if(q11 === 'аўтарытэтны' ){
+      score++
+      console.log(q11);
+    }
+    
+    //пытанне 9
+    const q91 = document.getElementById('q91').value.trim().toLowerCase();
+    const q92 = document.getElementById('q92').value.trim().toLowerCase();
+    const q93 = document.getElementById('q93').value.trim().toLowerCase();
+    const q94 = document.getElementById('q94').value.trim().toLowerCase();
+    if(q91 === 'г' && q92 === 'в' && q93 === 'б' && q94 === 'а') {
+      score++
+    }
+
+    const q10A = document.querySelector('input[name="q10"][value="A"]').checked;
+    const q10B = document.querySelector('input[name="q10"][value="B"]').checked;
+    const q10C = document.querySelector('input[name="q10"][value="C"]').checked;
+    const q10D = document.querySelector('input[name="q10"][value="D"]').checked;
+    if ( !q10A && q10B && !q10C && q10D) {
         score++;
     }
+
 
     // Вывод вынікаў
     const resultDiv = document.getElementById('result');
@@ -304,4 +326,4 @@ function checkAnswers() {
 </script>
 
 </body>
-      </html>
+</html>
