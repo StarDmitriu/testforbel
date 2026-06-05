@@ -170,7 +170,7 @@
         </div>
 
         <div class="question">
-            <div class="question-title">5. Выберыце ўсе варыянты, дзе пасля знакаў прыпынку пішацца літара ў:</div>
+            <div class="question-title">5. Выберыце сказы, у якіх пішацца літара ў:</div>
             <ul class="options">
                 <li><label><input type="checkbox" name="q5" value="A"> Прыйшоў брат, ... хаце стала ціха.</label></li>
                 <li><label><input type="checkbox" name="q5" value="B"> Надышла зіма, і ... лесе шмат снегу.</label></li>
@@ -205,8 +205,8 @@
         <div class="question">
             <div class="question-title">9. Устанавіце адпаведнасць паміж словамі і даведкамі пра іх паходжанне</div>
 
-            <p>1 фауна <input type="text" id="q91" maxlength="1"> а. ад лац. radius — спіца, прамень</p>
-            <p>2 раунд <input type="text" id="q92" maxlength="1"> б. ад J. Joule — прозвішча англійскага фізіка</p>
+            <p>1 фаўна <input type="text" id="q91" maxlength="1"> а. ад лац. radius — спіца, прамень</p>
+            <p>2 раўнд <input type="text" id="q92" maxlength="1"> б. ад J. Joule — прозвішча англійскага фізіка</p>
             <p>3 джоўль <input type="text" id="q93" maxlength="1"> в. ад англ. round — кола, круг</p>
             <p>4 радыус <input type="text" id="q94" maxlength="1"> г. ад лац. fauna — імя старажытнарымскай багіні    палёў і лясоў</p>
         </div>
@@ -214,10 +214,10 @@
         <div class="question">
           <div class="question-title">10. Выберыце ў якіх выпадках пішацца Ў?</div>
             <ul class="options">
-                <li><label><input type="checkbox" name="q10" value="A"> на канцы іншамоўных слоў не пад націскам</label></li>
+                <li><label><input type="checkbox" name="q10" value="A"> пасля галосных у пачатку слова</label></li>
                 <li><label><input type="checkbox" name="q10" value="B"> пасля знакаў прыпынку</label></li>
                 <li><label><input type="checkbox" name="q10" value="C"> у іншамоўных словах, якія заканчваюцца на ­ум, ­ус</label></li>
-                <li><label><input type="checkbox" name="q10" value="D"> пад націскам</label></li>
+                <li><label><input type="checkbox" name="q10" value="D"> пасля злучка ці двукосся, калі папярэдняе слова заканчваецца на галосны</label></li>
             </ul>
         </div>
 
@@ -312,7 +312,7 @@ function checkAnswers() {
     const q10B = document.querySelector('input[name="q10"][value="B"]').checked;
     const q10C = document.querySelector('input[name="q10"][value="C"]').checked;
     const q10D = document.querySelector('input[name="q10"][value="D"]').checked;
-    if ( !q10A && q10B && !q10C && q10D) {
+    if ( q10A && !q10B && !q10C && q10D) {
         score++;
     }
 
